@@ -1,0 +1,47 @@
+<article class="chat-container">
+  <sidebar class="sidebar">
+    <div class="sidebar-container">
+
+      <% @page.all.each do |item| %>
+      <div class="sidebar-item">
+        <img class="sidebar-avatar" width="50" height="50" src="<%= item.avatar_path %>" alt="Avatar for <%= item.display_name %>">
+        <a class="sidebar-link" href="<%= item.slug %>"><%= item.display_name %></a>
+      </div>
+      <% end %>
+
+    </div>
+  </sidebar>
+
+  <section class="chat">
+    <header class="chat-header">
+      <img class="sidebar-avatar" width="50" height="50" src="<%= @page.avatar_path %>" alt="Avatar for <%= @page.display_name %>">
+      <h2><%= @page.display_name %></h2>
+    </header>
+
+
+    <div class="chat-body">
+
+      <% @page.messages.each do |message| %>
+      <div><article class="message <%= message.css_class %>">
+
+        <% if @page.group_chat? %><header style="animation-delay:-<%= @page.animation_delay(message.speaker) %>s"><%= message.speaker %></header><% end %>
+
+        <div>
+          <% message.contents.each do |line| %>
+          <%= line %><br>
+          <% end %>
+        </div>
+
+        <footer><%= message.timestamp %></footer>
+
+      </article></div>
+      <% end %>
+
+    </div>
+
+  </section>
+
+  <% if request.base_url.include?('whatsapp') %>
+  <a href="/whatsapp.html">Profile</a>
+  <% end %>
+</article>

@@ -1,0 +1,536 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background: #ff7a18;
+  background-image: linear-gradient(to bottom right, #ff7a18, #9d153c, #319197);
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  max-width: 1396px;
+  margin: auto;
+  padding-top: 3em;
+  text-align: center;
+}
+
+.site-header h1,
+.site-header p {
+  margin: 0;
+  letter-spacing: 2px;
+  animation: comein 1.5s 1 ease-in-out forwards;
+}
+
+@keyframes comein {
+  0% { letter-spacing: 100px; color: rgba(255,255,255,0); }
+  70% { letter-spacing: 0px; }
+  100% { letter-spacing: 2px; color: rgba(255,255,255,1) }
+}
+
+.site-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  max-width: 15em ;
+  min-height: 10em;
+  margin: auto;
+  padding: 3em 0 0;
+
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.whatsapp,
+.messenger,
+.whatsapp a,
+.messenger a {
+  display: flex;
+}
+
+.whatsapp,
+.messenger {
+  align-items: stretch;
+}
+
+.whatsapp a,
+.messenger a {
+  align-items: flex-end;
+}
+
+.whatsapp {
+  background: url(/img/whatsapp-logo.png) top center no-repeat;
+  background-size: contain;
+}
+
+.messenger {
+  background: url(/img/msn-logo.png) top center no-repeat;
+  background-size: contain;
+}
+
+.container {
+  height: 100vh;
+  min-height: 100vh;
+  max-width: 1396px;
+  margin: auto;
+}
+
+.chat-container {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 3em;
+}
+
+.sidebar-container,
+.chat {
+  min-height: 10em;
+}
+
+.sidebar {
+  flex: 30%;
+}
+
+.chat {
+  flex: 70%;
+  background-color: #383353;
+}
+
+.sidebar-container {
+  position: relative;
+  background: #494566;
+  background-image: linear-gradient(to bottom, #494566, #23283b);
+  border-radius: 1em;
+  z-index: 1;
+}
+
+.sidebar-container::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: calc(100% + 10px);
+	height: calc(100% + 10px);
+  background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+	border-radius: 12px;
+  z-index: -2;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: .5em 1em;
+  border-bottom: 1px dashed rgba(255, 255, 255, .7);
+}
+
+.sidebar-item:last-of-type {
+  border: none;
+}
+
+.sidebar-avatar {
+  border-radius: 50%;
+}
+
+.sidebar-link {
+  display: inline-block;
+  padding-left: 1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chat-header,
+.chat-body {
+  padding: 1em 5em;
+}
+
+.chat-header {
+  background: rgba(0, 0, 0, .2);
+}
+
+.chat-header h2 {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+:root {
+ --general-message-color: #706198;
+ --general-message-color: #5a4f7d;
+ --custom-message-color: #463f68;
+}
+
+.message {
+  position: relative;
+  display: inline-block;
+  max-width: 80%;
+  min-height: 1.8em;
+  padding: .5em 1em;
+  margin: .1em 0;
+  background: var(--general-message-color);
+  border-radius: 1em;
+  word-wrap: break-word;
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  right: 100%;
+  border: .5em solid transparent;
+  border-right-color: var(--general-message-color);
+}
+
+.message header {
+  text-transform: uppercase;
+  font-size: .8em;
+
+  color: #F79533;
+  animation: speakercolors 100s infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes speakercolors {
+  0% { color: #F79533; }
+  15% { color: #F37055; }
+  30% { color: #EF4E7B; }
+  44% { color: #A166AB; }
+  58% { color: #5073B8; }
+  72% { color: #1098AD; }
+  86% { color: #07B39B; }
+  100% { color: #6DBA82; }
+}
+
+.message footer {
+  text-align: right;
+  margin-top: .5em;
+  font-size: .7em;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, .7);
+}
+
+.system-message {
+  max-width: 100%;
+  background: #a2a6fd;
+  background-image: linear-gradient(to right, #06bfc1, #a2a6fd);
+}
+
+.system-message::before {
+  border: none;
+}
+
+.system-message,
+.system-message footer {
+  color: #706198;
+}
+
+.user-message {
+  left: 100%;
+  transform: translate(-100%, 0);
+  background-color: var(--custom-message-color);
+  text-align: right;
+}
+
+.user-message::before {
+  right: 0;
+  left: 100%;
+  border-right-color: transparent;
+  border-left-color: var(--custom-message-color);
+}
+
+.user-message header {
+  color: rgba(255, 255, 255, .7);
+  animation: none;
+}
+
+.chat-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: yellow;
+}
+
+.media-omitted {
+  display: inline-block;
+  background-image: linear-gradient(
+    90deg,
+    #F79533 0%,
+    #F37055 15%,
+    #EF4E7B 30%,
+    #A166AB 44%,
+    #5073B8 58%,
+    #1098AD 72%,
+    #07B39B 86%,
+    #6DBA82 100%
+  );
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

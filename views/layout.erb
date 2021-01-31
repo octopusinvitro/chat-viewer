@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title><%= @page.title %></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="<%= @page.title %>">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/img/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <h1><a href="/">Chat Viewer</a></h1>
+    <p>✨🦄 now with more unicorns 🦄✨</p>
+
+    <nav class="site-navigation">
+      <ul>
+        <li class="whatsapp"><a href="/whatsapp">WhatsApp</a></li>
+        <li class="messenger"><a href="/messenger">Messenger</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="container">
+    <h1><%= @page.title %></h1>
+    <%= yield %>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+en:
+  css:
+    system_message: 'system-message'
+    user_message: 'user-message'
+  index:
+    title: 'Index page'
+  chat:
+    title: 'Choose a chat'
+    not_found: 'Sorry, that chat does not exist'
+    default_avatar: '/img/unicorn-avatar.png'
+    # default_avatar: '/img/default-avatar.svg'
+    default_display_name: 'Choose a chat'
+    link: '<a class="chat-link" href="%{url}">%{domain}</a>'
+    strikedtext: '<span style="text-decoration:line-through;">%{text}</span>'
+  whatsapp_chat:
+    title: 'Whatsapp'
+    media_omitted: '<Media omitted>'
+    media_omitted_span: '<span class="media-omitted">Media Omitted</span>'
+    usernames:
+    - 'your username'
+  messenger_chat:
+    title: 'Messenger'
+    system_message: 'Nunca revele sus contraseñas o números de tarjetas de crédito en una conversación de mensajes instantáneos.'
+    usernames:
+    - 'your username'
+    emojis:
+      '[(L)]': ❤️
+      '[(l)]': ❤️
+      '[(U)]': 💔
+      '[(u)]': 💔
+      '[(K)]': 💋
+      '[(k)]': 💋
+      '[(Y)]': 👍
+      '[(y)]': 👍
+      '[(N)]': 👎
+      '[(n)]': 👎
+      '[(B)]': 🍺
+      '[(b)]': 🍺
+      '[(D)]': 🍸
+      '[(d)]': 🍸
+      '[(X)]': 👧
+      '[(x)]': 👧
+      '[(Z)]': 👦
+      '[(z)]': 👦
+      '[(G)]': 🎁
+      '[(g)]': 🎁
+      '[(F)]': 🌹
+      '[(f)]': 🌹
+      '[(W)]': 🥀
+      '[(w)]': 🥀
+      '[(P)]': 📷
+      '[(P)]': 📷
+      '[(~)]': 🎞️
+      '[(@)]': 🐱
+      '[(&)]': 🐶
+      '[(T)]': ☎️
+      '[(t)]': ☎️
+      '[(I)]': 💡
+      '[(i)]': 💡
+      '[(8)]': 🎵
+      '[(S)]': 🌜
+      '[(*)]': ⭐
+      '[(E)]': 📧
+      '[(e)]': 📧
+      '[(0)]': ⏲️
+      '[(O)]': ⏲️
+      '[(o)]': ⏲️
+      '[(sn)]': 🐌
+      '[(bah)]': 🐑
+      '[(pl)]': 🍽️
+      '[(pi)]': 🍕
+      '[(so)]': ⚽
+      '[(au)]': 🚗
+      '[(ap)]': ✈️
+      '[(um)]': ☂️
+      '[(ip)]': 🏝️
+      '[(co)]': 🖥️
+      '[(mp)]': 📱
+      '[(st)]': ☁️
+      '[(li)]': ⚡
+      '[(mo)]': 💰
+      '[(:-O)]': 😮
+      '[(:-o)]': 😮
+      '[(:-P)]': 😛
+      '[(:-p)]': 😛
+      '[(:-S)]': 😕
+      '[(:S)]': 😕
+      '[(:S)]': 😕
+      '[(:-@)]': 😠
+      '[(:@)]': 😠
+      # '[8-|]': 🤓
+      '[(H)]': 🔥
+      '[(h)]': 🔥
+      '[(A)]': 👼
+      '[(a)]': 👼
+      '[(6)]': 😈
+      '[(:-*)]': 🤫
+      '[(C)]': ☕
+      '[(c)]': ☕
+      '[({)]': 🤗
+      '[(})]': 🤗

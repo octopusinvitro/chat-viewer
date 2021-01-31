@@ -1,0 +1,7 @@
+dist: trusty
+language: ruby
+rvm:
+  - 3.0.0
+cache: bundler
+script:
+  - bundle exec rake
